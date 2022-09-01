@@ -127,7 +127,6 @@ button:hover {
     background-color: var(--color-text);
     color: white;
     cursor: pointer;
-
 }
 
 button:active {
@@ -178,8 +177,6 @@ input.invalid+p {
         position: relative;
     }
 
-
-
     .container {
         position: absolute;
         top: 25vh;
@@ -187,7 +184,6 @@ input.invalid+p {
         display: flex;
         align-items: center;
         padding: 0 10%;
-
     }
 
     .left {
@@ -240,11 +236,9 @@ input.invalid+p {
         height: 100%;
     }
 
-
     .container {
         font-size: 1em;
         top: 25vh;
-
     }
 
     input {
@@ -261,6 +255,4 @@ input.invalid+p {
     button {
         margin: 10px 0;
     }
-
-
 }
