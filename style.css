@@ -174,6 +174,19 @@ input.invalid+p {
 @media (max-width: 920px) {
     body {
         flex-direction: column;
+        position: relative;
+    }
+
+
+
+    .container {
+        position: absolute;
+        top: 25vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+
     }
 
     .left {
@@ -184,18 +197,10 @@ input.invalid+p {
     }
 
     .brand {
-        position: absolute;
-        top: 45px;
-        background-color: rgba(0, 0, 0, 0.31);
-        padding: 10px 20px
-    }
-
-    .container {
-        position: absolute;
-        top: 25vh;
+        top: 0;
         width: 100vw;
-        display: flex;
-        align-items: center;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.31);
     }
 
     input {
@@ -220,14 +225,25 @@ input.invalid+p {
 }
 
 @media (max-width: 500px) {
+
+    .left {
+        background-image: url("img/main2.jpg");
+        width: 100vw;
+        position: relative;
+        height: 20vh
+    }
+
     .brand {
         top: 0;
         width: 100vw;
-        height: 100%
+        height: 100%;
     }
+
 
     .container {
         font-size: 1em;
+        top: 25vh;
+
     }
 
     input {
