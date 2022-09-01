@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
 
-
 *,
 *::before,
 *::after {
@@ -13,7 +12,6 @@
     --color-text: #68CEC2;
     --color-dark: #14211e9e;
 }
-
 
 body {
     display: flex;
@@ -34,13 +32,12 @@ body {
 
 .brand {
     position: absolute;
-    top: 30vh;
+    top: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
     font-family: 'Pathway Gothic One', sans-serif;
-
 }
 
 svg {
@@ -62,8 +59,8 @@ svg {
     justify-content: center;
     font-family: Heletica, Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color-dark);
-    padding: 0px 6%;
-    font-size: 1.5em;
+    padding: 0px 8%;
+    font-size: 1.2em;
     gap: 20px;
 }
 
@@ -87,7 +84,7 @@ svg {
     display: flex;
     flex-flow: column wrap;
     width: 45%;
-    gap: 5px
+    gap: 5px;
 }
 
 .input-label {
@@ -109,16 +106,16 @@ input:focus {
     border-bottom: 2px solid var(--color-text);
 }
 
-
 button {
     background-color: transparent;
     color: var(--color-text);
-    padding: 10px 20px;
+    padding: 15px 30px;
     margin: 20px 0;
     font-weight: bold;
     border: 3px solid var(--color-text);
     border-radius: 30px;
     font-size: 1em;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -141,6 +138,7 @@ button:active {
 a {
     text-decoration: none;
     color: var(--color-text);
+    transition: 0.3s;
 }
 
 a:hover {
@@ -151,7 +149,23 @@ a:active {
     color: gray;
 }
 
-@media (max-width: 860px) {
+.error {
+    color: red;
+    font-size: 0.7em;
+}
+
+input+p {
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid+p {
+    opacity: 1;
+    height: auto;
+}
+
+
+@media (max-width: 920px) {
     body {
         flex-direction: column;
     }
@@ -176,16 +190,31 @@ a:active {
         width: 100vw;
         display: flex;
         align-items: center;
-        font-size: 1.2em;
     }
 
     .form {
-        padding-left: 35px;
+        justify-content: center;
     }
 
+    .input-box {
+        width: 48%;
+    }
+
+    .create-acc {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+    .input-box {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 500px) {
     .brand {
         top: 0;
         width: 100vw;
@@ -197,36 +226,21 @@ a:active {
     }
 
     .promote {
-        padding-bottom: 20px;
+        padding-bottom: 0px;
     }
-
-    form {
-        width: 80vw;
-        padding: 30px 20px;
-        background-color: rgba(218, 218, 218, 0.2);
-    }
-
-
-
-    .form {
-        flex-flow: column nowrap;
-        padding-left: 0;
-    }
-
 
     .input-box {
-        width: 106%;
+        width: 100%;
         padding: 0 20px;
         gap: 10px;
-        font-size: 1em
+        font-size: 1em;
     }
 
     button {
-        margin: 5px 0;
+        margin: 15px 0 0 0;
     }
 
     .login {
-        gap: 10px;
         padding-bottom: 30px;
     }
 }

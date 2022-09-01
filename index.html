@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign-up</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Sign-up | SOIAN</title>
 </head>
 
 <body>
@@ -27,42 +28,83 @@
                 your deepest dreams. Sign up now to get started.</p>
             <p class="promote">You know you want to.</p>
         </div>
-        <form action="#">
+        <form action="#" method="get">
             <p class="title">Let's do this!</p>
             <div class="form">
                 <div class="input-box">
                     <label class="input-label" for="first-name">First name</label>
-                    <input type="text" id="first-name">
+                    <input type="text" id="first-name" name="firstname" required />
+                    <p id="first-name-error" class="error">Please type in your first name</p>
                 </div>
                 <div class="input-box">
                     <label class="input-label" for="last-name">Last name</label>
-                    <input type="text" id="last-name">
+                    <input type="text" id="last-name" name="lastname" required />
+                    <p id="last-name-error" class="error">Please type in your last name</p>
                 </div>
                 <div class="input-box">
                     <label class="input-label" for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email" required />
+                    <p id="email-error" class="error">Please enter a valid email, e.g. me@mydomain.com</p>
                 </div>
                 <div class="input-box">
                     <label class="input-label" for="phone">Phone number</label>
-                    <input type="tel" id="phone">
+                    <input type="tel" id="phone" name="phone" required />
+                    <p id=" phone-error" class="error">please enter a valid phone number (10 digits)</p>
                 </div>
                 <div class="input-box">
                     <label class="input-label" for="password">Password</label>
-                    <input type="password" id="password">
+                    <input type="password" id="password" name="password" required />
+                    <p id="password-error" class="error">Password must be at least 8 characters</p>
                 </div>
                 <div class="input-box">
                     <label class="input-label" for="confirm">Confirm password</label>
-                    <input type="password" id="confirm">
+                    <input type="password" id="confirm" name="confirm" required />
+                    <p id="confirm-error" class="error">Passwords do not match</p>
                 </div>
             </div>
+            <div class="create-acc">
+                <button type="submit">Create account</button>
+            </div>
         </form>
-        <div class="create-acc">
-            <button type="submit">Create account</button>
-        </div>
+
         <div class="login">
             <p>Already have an account?</p><a href="#">Log in</a>
         </div>
     </div>
+    <script>
+        const inputs = document.querySelectorAll("input");
+        const password = document.querySelector("#password");
+        const confirm = document.querySelector("#confirm");
+        const patterns = {
+            firstname: /.+/,
+            lastname: /.+/,
+            email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+            phone: /^\d{10}$/,
+            password: /^[@-\w]{8,}$/,
+            confirm: /^[@-\w]{8,}$/,
+
+        }
+        function validate(field, regex) {
+            if (regex.test(field.value)) {
+                field.classList = "valid";
+            } else {
+                field.classList = "invalid";
+            }
+        }
+        inputs.forEach((input) => {
+            input.addEventListener("keyup", (e) => {
+                validate(e.target, patterns[e.target.attributes.name.value])
+            })
+        })
+
+        confirm.addEventListener("keyup", () => {
+            if (confirm.value !== password.value) {
+                confirm.classList = "invalid";
+            } else {
+                confirm.classList = "valid";
+            }
+        })
+    </script>
 </body>
 
 </html>
