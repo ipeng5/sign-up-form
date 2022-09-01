@@ -10,49 +10,55 @@
 </head>
 
 <body>
-    <div class="brand">
-        <img src="img/logo.svg" alt="logo" class="logo">
-        <p class="brand-name">SOIAN</p>
+    <div class="left">
+        <div class="brand">
+            <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m3.514 6.636c-.317.179-.514.519-.514.887v8.95c0 .37.197.708.514.887 1.597.901 6.456 3.639 8.005 4.512.152.085.319.128.487.128.164 0 .328-.041.477-.123 1.549-.855 6.39-3.523 7.994-4.408.323-.177.523-.519.523-.891v-9.055c0-.368-.197-.708-.515-.887-1.595-.899-6.444-3.632-7.999-4.508-.151-.085-.319-.128-.486-.128-.168 0-.335.043-.486.128-1.555.876-6.405 3.609-8 4.508zm15.986 2.115v7.525l-6.75 3.722v-7.578zm-14.264-1.344 6.764-3.813 6.801 3.834-6.801 3.716z"
+                    fill-rule="nonzero" />
+            </svg>
+            <p class="brand-name">SOIAN</p>
+        </div>
     </div>
     <div class="container">
         <div class="intro">
             <p>This is not a real online service! You now you need something like this in your life to help you realize
-                your deepest dreams.</p>
-            <p>Sign up now to get started.</p>
-            <p>You know you want to.</p>
+                your deepest dreams. Sign up now to get started.</p>
+            <p class="promote">You know you want to.</p>
         </div>
         <form action="#">
-            <fieldset>
-                <p>Let's do this!</p>
-                <div class="form">
-                    <label for="first-name">FIRST NAME</label>
+            <p class="title">Let's do this!</p>
+            <div class="form">
+                <div class="input-box">
+                    <label class="input-label" for="first-name">First name</label>
                     <input type="text" id="first-name">
                 </div>
-                <div class="form">
-                    <label for="last-name">LAST NAME</label>
+                <div class="input-box">
+                    <label class="input-label" for="last-name">Last name</label>
                     <input type="text" id="last-name">
                 </div>
-                <div class="form">
-                    <label for="email">EMAIL</label>
+                <div class="input-box">
+                    <label class="input-label" for="email">Email</label>
                     <input type="email" id="email">
                 </div>
-                <div class="form">
-                    <label for="phone">PHONE NUMBER</label>
+                <div class="input-box">
+                    <label class="input-label" for="phone">Phone number</label>
                     <input type="tel" id="phone">
                 </div>
-                <div class="form">
-                    <label for="password">PASSWORD</label>
+                <div class="input-box">
+                    <label class="input-label" for="password">Password</label>
                     <input type="password" id="password">
                 </div>
-                <div class="form">
-                    <label for="confirm">CONFIRM PASSWORD</label>
+                <div class="input-box">
+                    <label class="input-label" for="confirm">Confirm password</label>
                     <input type="password" id="confirm">
                 </div>
-            </fieldset>
-            <div class="create-acc">
-                <button type="submit">Create Account</button>
             </div>
         </form>
+        <div class="create-acc">
+            <button type="submit">Create account</button>
+        </div>
         <div class="login">
             <p>Already have an account?</p><a href="#">Log in</a>
         </div>

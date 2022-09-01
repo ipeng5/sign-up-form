@@ -1,7 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    --color-text: #68CEC2;
+    --color-dark: #14211e9e;
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left {
+    background-image: url("img/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    position: absolute;
+    top: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    font-family: 'Pathway Gothic One', sans-serif;
+
+}
+
+svg {
+    fill: white;
+    width: 5em;
+    height: 5em;
+}
+
+.brand p {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 0.5em;
+}
+
+.container {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Heletica, Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-dark);
+    padding: 0px 6%;
+    font-size: 1.5em;
+    gap: 20px;
+}
+
+.promote {
+    padding: 20px 0;
+}
+
+.title {
+    color: var(--color-text);
+    padding-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 1.2em;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-flow: column wrap;
+    width: 45%;
+    gap: 5px
+}
+
+.input-label {
+    font-size: 0.7em;
+    color: rgba(128, 128, 128, 0.768);
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--color-text);
+}
+
+
+button {
+    background-color: transparent;
+    color: var(--color-text);
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-weight: bold;
+    border: 3px solid var(--color-text);
+    border-radius: 30px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--color-text);
+    color: white;
+    cursor: pointer;
+
+}
+
+button:active {
+    background-color: black;
+    border: 3px solid black;
+}
+
+.login {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: gray;
+}
+
+@media (max-width: 860px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left {
+        background-image: url("img/main2.jpg");
+        width: 100vw;
+        position: relative;
+        height: 20vh
+    }
+
+    .brand {
+        position: absolute;
+        top: 45px;
+        background-color: rgba(0, 0, 0, 0.31);
+        padding: 10px 20px
+    }
+
+    .container {
+        position: absolute;
+        top: 25vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .form {
+        padding-left: 35px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .brand {
+        top: 0;
+        width: 100vw;
+        height: 100%
+    }
+
+    .container {
+        font-size: 1em;
+    }
+
+    .promote {
+        padding-bottom: 20px;
+    }
+
+    form {
+        width: 80vw;
+        padding: 30px 20px;
+        background-color: rgba(218, 218, 218, 0.2);
+    }
 
 
 
-img {
-    width: 50px;
+    .form {
+        flex-flow: column nowrap;
+        padding-left: 0;
+    }
+
+
+    .input-box {
+        width: 106%;
+        padding: 0 20px;
+        gap: 10px;
+        font-size: 1em
+    }
+
+    button {
+        margin: 5px 0;
+    }
+
+    .login {
+        gap: 10px;
+        padding-bottom: 30px;
+    }
 }
