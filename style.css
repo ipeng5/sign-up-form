@@ -138,6 +138,7 @@ button:active {
 .login {
     display: flex;
     gap: 10px;
+    padding-bottom: 30px;
 }
 
 
@@ -261,7 +262,5 @@ input.invalid+p {
         margin: 10px 0;
     }
 
-    .login {
-        padding-bottom: 30px;
-    }
+
 }
