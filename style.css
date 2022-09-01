@@ -32,7 +32,7 @@ body {
 
 .brand {
     position: absolute;
-    top: 25vh;
+    top: 28vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,24 +99,29 @@ input {
     border-bottom: 1px solid rgba(128, 128, 128, 0.8);
     font-size: 1em;
     color: rgba(0, 0, 0, 0.8);
-    width: 90%;
+    width: 80%;
 }
 
 input:focus {
     border-bottom: 2px solid var(--color-text);
 }
 
+.input-box:focus-within label {
+    color: var(--color-text);
+}
+
+
 button {
     background-color: transparent;
     color: var(--color-text);
     padding: 15px 30px;
-    margin: 20px 0;
+    margin: 40px 0 20px 0;
     font-weight: bold;
     border: 3px solid var(--color-text);
-    border-radius: 30px;
     font-size: 1em;
     transition: 0.3s;
 }
+
 
 button:hover {
     background-color: var(--color-text);
@@ -134,6 +139,7 @@ button:active {
     display: flex;
     gap: 10px;
 }
+
 
 a {
     text-decoration: none;
@@ -192,8 +198,8 @@ input.invalid+p {
         align-items: center;
     }
 
-    .form {
-        justify-content: center;
+    input {
+        width: 95%;
     }
 
     .input-box {
@@ -213,7 +219,6 @@ input.invalid+p {
     }
 }
 
-
 @media (max-width: 500px) {
     .brand {
         top: 0;
@@ -225,8 +230,8 @@ input.invalid+p {
         font-size: 1em;
     }
 
-    .promote {
-        padding-bottom: 0px;
+    input {
+        width: 100%;
     }
 
     .input-box {
@@ -237,7 +242,7 @@ input.invalid+p {
     }
 
     button {
-        margin: 15px 0 0 0;
+        margin: 10px 0;
     }
 
     .login {
