@@ -110,7 +110,6 @@ input:focus {
     color: var(--color-text);
 }
 
-
 button {
     background-color: transparent;
     color: var(--color-text);
@@ -121,7 +120,6 @@ button {
     font-size: 1em;
     transition: 0.3s;
 }
-
 
 button:hover {
     background-color: var(--color-text);
@@ -139,7 +137,6 @@ button:active {
     gap: 10px;
     padding-bottom: 30px;
 }
-
 
 a {
     text-decoration: none;
@@ -170,7 +167,6 @@ input.invalid+p {
     height: auto;
 }
 
-
 @media (max-width: 920px) {
     body {
         flex-direction: column;
@@ -187,7 +183,8 @@ input.invalid+p {
     }
 
     .left {
-        background-image: url("img/main2.jpg");
+        background-image: url("img/main.jpg");
+        background-position: 50% 70%;
         width: 100vw;
         position: relative;
         height: 20vh
@@ -224,7 +221,6 @@ input.invalid+p {
 @media (max-width: 500px) {
 
     .left {
-        background-image: url("img/main2.jpg");
         width: 100vw;
         position: relative;
         height: 20vh
