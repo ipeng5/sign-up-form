@@ -44,7 +44,7 @@
                 <div class="input-box">
                     <label class="input-label" for="email">Email</label>
                     <input type="email" id="email" name="email" required
-                        pattern="^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$">
+                        pattern="^([a-z\d\.!#$%&'*+/=?^_`{|}~-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$">
                     <p id="email-error" class="error">Please enter a valid email, e.g. me@mydomain.com</p>
                 </div>
                 <div class="input-box">
@@ -80,7 +80,7 @@
         const patterns = {
             firstname: /.+/,
             lastname: /.+/,
-            email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+            email: /^([a-z\d\.!#$%&'*+/=?^_`{|}~-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
             phone: /^\d{10}$/,
             password: /^[@-\w]{8,}$/,
             confirm: /^[@-\w]{8,}$/,
